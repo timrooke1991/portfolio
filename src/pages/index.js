@@ -5,7 +5,6 @@ import Layout from '../components/layout';
 import ColumnLeft from '../components/columnLeft';
 import ColumnRight from '../components/columnRight';
 import Panel from '../components/panel';
-import Image from '../components/image';
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -58,8 +57,6 @@ class IndexPage extends React.Component {
       newRightPanel = this.state.rightPanel + 1;
     }
 
-
-
     const panels = this.resetPanelConfig();
     panels[newLeftPanel] = true;
     panels[newRightPanel] = true;
@@ -82,7 +79,6 @@ class IndexPage extends React.Component {
           UP
         </button>
         <ColumnLeft>
-          <p>{JSON.stringify(this.state)}</p>
           <Panel
             id={1}
             giveId={id => this.collectId(id)}

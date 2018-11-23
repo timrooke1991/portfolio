@@ -25,10 +25,12 @@ button.down {
 }
 
 .container-left {
+  background-image: url(../images/pattern-dark.jpg);
   grid-area: 1 / 1 / 6 / 2;
 }
 
 .container-right {
+  background-image: url(../images/pattern-light.jpg);
   grid-area: 1 / 2 / 6 / 2;
 }
 
