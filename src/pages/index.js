@@ -81,14 +81,12 @@ class IndexPage extends React.Component {
         <ColumnLeft>
           <Panel
             id={1}
-            giveId={id => this.collectId(id)}
             display={this.state.panels[1]}
           >
             <h1>Panel 1</h1>
           </Panel>
           <Panel
             id={2}
-            giveId={id => this.collectId(id)}
             display={this.state.panels[2]}
           >
             <h1 className="panel-title-code open-tag">Tim</h1>
@@ -96,7 +94,6 @@ class IndexPage extends React.Component {
           </Panel>
           <Panel
             id={3}
-            giveId={id => this.collectId(id)}
             display={this.state.panels[3]}
           >
             <h1>Hi people</h1>
@@ -108,7 +105,6 @@ class IndexPage extends React.Component {
         <ColumnRight>
           <Panel
             id={4}
-            giveId={id => this.collectId(id)}
             display={this.state.panels[4]}
             mode="light"
           >
@@ -122,7 +118,6 @@ class IndexPage extends React.Component {
           </Panel>
           <Panel
             id={5}
-            giveId={id => this.collectId(id)}
             display={this.state.panels[5]}
             mode="light"
           >
@@ -130,7 +125,6 @@ class IndexPage extends React.Component {
           </Panel>
           <Panel
             id={6}
-            giveId={id => this.collectId(id)}
             display={this.state.panels[6]}
             mode="light"
           >

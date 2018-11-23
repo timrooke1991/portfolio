@@ -10,21 +10,14 @@ class Panel extends React.Component {
     this.state = {
       classes: this.props.display ? 'show' : 'hide'
     };
-
-    this.giveId = this.giveId.bind(this);
   }
 
   UNSAFE_componentWillReceiveProps(nextProps) {
-    console.log('next', nextProps);
     if (this.props.display !== nextProps.display) {
       this.setState({
         classes: nextProps.display ? 'show' : 'hide'
       });
     }
-  }
-
-  giveId() {
-    this.props.giveId(this.props.id);
   }
 
   render() {
