@@ -12,25 +12,21 @@ class IndexPage extends React.Component {
     super(props);
 
     this.state = {
-      1: false,
-      2: false,
-      3: true,
-      4: true,
-      5: false,
-      6: false
+      panels: {
+        1: false,
+        2: false,
+        3: true,
+        4: true,
+        5: false,
+        6: false
+      },
+      leftPanel: 3,
+      rightPanel: 4
     };
   }
 
-  // Need a refactor - get it working off click event to begin with
-  // Scroll is too problematic as dynmically hiding and show content means
-  // no scroll event is actually triggered
-
-  collectId(id, direction) {
-    console.log('clicked', id);
-    console.log('even?', id % 2 === 0);
-    const partnerId = id % 2 === 0 ? id - 1 : id + 1;
-    console.log('partnerId', partnerId);
-    const newState = {
+  resetPanelConfig() {
+    return {
       1: false,
       2: false,
       3: false,
@@ -38,34 +34,66 @@ class IndexPage extends React.Component {
       5: false,
       6: false
     };
+  }
 
-    if (direction === 'up') {
-      newState[Math.max(id + 2, 5)] = true;
-      newState[Math.max(partnerId + 2, 6)] = true;
-    } else {
-      console.log('new ids', id - 2, partnerId - 2);
+  handleClick(direction) {
+    const disableDown = [1, 6].some(n => n === this.state.leftPanel);
+    const disableUp = [3, 4].some(n => n === this.state.leftPanel);
 
-      newState[Math.max(id - 2, 1)] = true;
-      newState[Math.max(partnerId - 2, 1)] = true;
+    let newLeftPanel, newRightPanel;
+    console.log(disableDown, disableUp);
+    if (direction === 'down' && disableDown) {
+      return null;
     }
 
-    this.setState(newState);
+    if (direction === 'up' && disableUp) {
+      return null;
+    }
+
+    if (direction === 'up' && !disableUp) {
+      newLeftPanel = this.state.leftPanel + 1;
+      newRightPanel = this.state.rightPanel - 1;
+    } else if (direction === 'down' && !disableDown) {
+      newLeftPanel = this.state.leftPanel - 1;
+      newRightPanel = this.state.rightPanel + 1;
+    }
+
+
+
+    const panels = this.resetPanelConfig();
+    panels[newLeftPanel] = true;
+    panels[newRightPanel] = true;
+
+    this.setState({
+      leftPanel: newLeftPanel,
+      rightPanel: newRightPanel,
+      panels
+    });
   }
 
   render() {
     return (
       <Layout>
+        <button
+          className="up"
+          type="button"
+          onClick={() => this.handleClick('up')}
+        >
+          UP
+        </button>
         <ColumnLeft>
           <p>{JSON.stringify(this.state)}</p>
           <Panel
             id={1}
             giveId={id => this.collectId(id)}
-            display={this.state[1]}
-          />
+            display={this.state.panels[1]}
+          >
+            <h1>Panel 1</h1>
+          </Panel>
           <Panel
             id={2}
             giveId={id => this.collectId(id)}
-            display={this.state[2]}
+            display={this.state.panels[2]}
           >
             <h1 className="panel-title-code open-tag">Tim</h1>
             <h1 className="panel-title-code close-tag">Rooke</h1>
@@ -73,7 +101,7 @@ class IndexPage extends React.Component {
           <Panel
             id={3}
             giveId={id => this.collectId(id)}
-            display={this.state[3]}
+            display={this.state.panels[3]}
           >
             <h1>Hi people</h1>
             <p>Welcome to your new Gatsby site.</p>
@@ -85,7 +113,7 @@ class IndexPage extends React.Component {
           <Panel
             id={4}
             giveId={id => this.collectId(id)}
-            display={this.state[4]}
+            display={this.state.panels[4]}
             mode="light"
           >
             <h2 className="panel-title-code open-tag">Full Stack</h2>
@@ -99,7 +127,7 @@ class IndexPage extends React.Component {
           <Panel
             id={5}
             giveId={id => this.collectId(id)}
-            display={this.state[5]}
+            display={this.state.panels[5]}
             mode="light"
           >
             <h1>Hello World</h1>
@@ -107,10 +135,19 @@ class IndexPage extends React.Component {
           <Panel
             id={6}
             giveId={id => this.collectId(id)}
-            display={this.state[6]}
+            display={this.state.panels[6]}
             mode="light"
-          />
+          >
+            <h1>Panel 6</h1>
+          </Panel>
         </ColumnRight>
+        <button
+          className="down"
+          type="button"
+          onClick={() => this.handleClick('down')}
+        >
+          DOWN
+        </button>
       </Layout>
     );
   }
