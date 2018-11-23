@@ -36,7 +36,7 @@ class IndexPage extends React.Component {
         five: true,
         six: false
       });
-    } else if (id === 'two' || id === '5') {
+    } else if (id === 'two' || id === 'five') {
       console.log('updates');
       this.setState({
         one: true,
