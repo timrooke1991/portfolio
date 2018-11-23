@@ -12,12 +12,12 @@ class IndexPage extends React.Component {
     super(props);
 
     this.state = {
-      one: false,
-      two: false,
-      three: true,
-      four: true,
-      five: false,
-      six: false
+      1: false,
+      2: false,
+      3: true,
+      4: true,
+      5: false,
+      6: false
     };
   }
 
@@ -26,25 +26,25 @@ class IndexPage extends React.Component {
   // no scroll event is actually triggered
 
   collectId(id) {
-    if (id === 'three' || id === 'four') {
+    if (id === 3 || id === 4) {
       console.log('updates');
       this.setState({
-        one: false,
-        two: true,
-        three: false,
-        four: false,
-        five: true,
-        six: false
+        1: false,
+        2: true,
+        3: false,
+        4: false,
+        5: true,
+        6: false
       });
-    } else if (id === 'two' || id === 'five') {
+    } else if (id === 2 || id === 5) {
       console.log('updates');
       this.setState({
-        one: true,
-        two: false,
-        three: false,
-        four: false,
-        five: false,
-        six: true
+        1: true,
+        2: false,
+        3: false,
+        4: false,
+        5: false,
+        6: true
       });
     }
   }
@@ -54,22 +54,22 @@ class IndexPage extends React.Component {
       <Layout>
         <ColumnLeft>
           <Panel
-            id={'one'}
+            id={1}
             giveId={id => this.collectId(id)}
-            display={this.state.one}
+            display={this.state[1]}
           />
           <Panel
-            id={'two'}
+            id={2}
             giveId={id => this.collectId(id)}
-            display={this.state.two}
+            display={this.state[2]}
           >
             <h1 className="panel-title-code open-tag">Tim</h1>
             <h1 className="panel-title-code close-tag">Rooke</h1>
           </Panel>
           <Panel
-            id={'three'}
+            id={3}
             giveId={id => this.collectId(id)}
-            display={this.state.three}
+            display={this.state[3]}
           >
             <h1>Hi people</h1>
             <p>Welcome to your new Gatsby site.</p>
@@ -79,9 +79,9 @@ class IndexPage extends React.Component {
         </ColumnLeft>
         <ColumnRight>
           <Panel
-            id={'four'}
+            id={4}
             giveId={id => this.collectId(id)}
-            display={this.state.four}
+            display={this.state[4]}
             mode="light"
           >
             <h2 className="panel-title-code open-tag">Full Stack</h2>
@@ -93,17 +93,17 @@ class IndexPage extends React.Component {
             </p>
           </Panel>
           <Panel
-            id={'five'}
+            id={5}
             giveId={id => this.collectId(id)}
-            display={this.state.five}
+            display={this.state[5]}
             mode="light"
           >
             <h1>Hello World</h1>
           </Panel>
           <Panel
-            id={'six'}
+            id={6}
             giveId={id => this.collectId(id)}
-            display={this.state.six}
+            display={this.state[6]}
             mode="light"
           />
         </ColumnRight>
