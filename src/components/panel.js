@@ -23,12 +23,9 @@ class Panel extends React.Component {
   render() {
     return (
       <div
-        ref={section => (this.panel = section)}
-        id={this.props.id}
         className={`panel-image-${this.props.mode} flex-container ${
           this.state.classes
         }`}
-        onClick={this.giveId}
       >
         <div className="vertically-center">{this.props.children}</div>
       </div>
