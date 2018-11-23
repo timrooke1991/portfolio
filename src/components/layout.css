@@ -24,6 +24,10 @@ button.down {
   padding: 20px;
 }
 
+.hide-button {
+  display: none;
+}
+
 .container-left {
   background-image: url(../images/pattern-dark.jpg);
   grid-area: 1 / 1 / 6 / 2;
