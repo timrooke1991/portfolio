@@ -21,6 +21,10 @@ class IndexPage extends React.Component {
     };
   }
 
+  // Need a refactor - get it working off click event to begin with
+  // Scroll is too problematic as dynmically hiding and show content means
+  // no scroll event is actually triggered
+
   collectId(id) {
     if (id === 'three' || id === 'four') {
       console.log('updates');
