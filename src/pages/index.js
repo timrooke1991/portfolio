@@ -25,34 +25,38 @@ class IndexPage extends React.Component {
   // Scroll is too problematic as dynmically hiding and show content means
   // no scroll event is actually triggered
 
-  collectId(id) {
-    if (id === 3 || id === 4) {
-      console.log('updates');
-      this.setState({
-        1: false,
-        2: true,
-        3: false,
-        4: false,
-        5: true,
-        6: false
-      });
-    } else if (id === 2 || id === 5) {
-      console.log('updates');
-      this.setState({
-        1: true,
-        2: false,
-        3: false,
-        4: false,
-        5: false,
-        6: true
-      });
+  collectId(id, direction) {
+    console.log('clicked', id);
+    console.log('even?', id % 2 === 0);
+    const partnerId = id % 2 === 0 ? id - 1 : id + 1;
+    console.log('partnerId', partnerId);
+    const newState = {
+      1: false,
+      2: false,
+      3: false,
+      4: false,
+      5: false,
+      6: false
+    };
+
+    if (direction === 'up') {
+      newState[Math.max(id + 2, 5)] = true;
+      newState[Math.max(partnerId + 2, 6)] = true;
+    } else {
+      console.log('new ids', id - 2, partnerId - 2);
+
+      newState[Math.max(id - 2, 1)] = true;
+      newState[Math.max(partnerId - 2, 1)] = true;
     }
+
+    this.setState(newState);
   }
 
   render() {
     return (
       <Layout>
         <ColumnLeft>
+          <p>{JSON.stringify(this.state)}</p>
           <Panel
             id={1}
             giveId={id => this.collectId(id)}
