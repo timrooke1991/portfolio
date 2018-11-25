@@ -40,7 +40,7 @@ class SecondPage extends Component {
 
   renderItem(item, key) {
     return (
-      <div key={key}>
+      <div className="item" key={key}>
         <h3>{item.name}</h3>
         <p>{item.description}</p>
       </div>
