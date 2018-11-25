@@ -9,6 +9,11 @@
   grid-template-rows: 100vh;
 }
 
+.dark-background {
+  background-image: url(../images/pattern-dark.jpg);
+  height: 100vh;
+}
+
 @media screen and (max-width: 768px) {
   .container {
     grid-template-columns: 100vw;
