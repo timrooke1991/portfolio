@@ -34,11 +34,14 @@ class Panel extends React.Component {
 }
 
 Panel.propTypes = {
-  mode: PropTypes.string
+  mode: PropTypes.string,
+  display: PropTypes.bool,
+  id: PropTypes.number.isRequired
 };
 
 Panel.defaultProps = {
-  mode: 'dark'
+  mode: 'dark',
+  display: false
 };
 
 export default Panel;
