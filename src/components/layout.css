@@ -68,12 +68,29 @@ button.down {
 .show {
   max-height: 100%;
   transition: max-height 0.5s ease-out;
+
 }
 
 .hide {
-  max-height: 0%;
+  max-height: 0px;
   overflow: hidden;
+  line-height: 0;
+  zoom: 1;
   transition: max-height 0.5s ease-out;
+}
+
+.icon-container {
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.icon-circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: purple;
+  margin: 15px;
 }
 
 .flex-container {
@@ -92,6 +109,20 @@ button.down {
 h1 {
   font-size: 66px;
   font-weight: 600;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+p {
+  margin: 15px 0;
 }
 
 h2.panel-title-code {
