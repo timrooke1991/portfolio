@@ -29,6 +29,26 @@ h1 {
   color: $primaryYellow;
 }
 
+h2 {
+  font-family: $fontFamilyRegular, sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  color: $primaryYellow;
+}
+
+h3 {
+  font-family: $fontFamilyRegular, sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: $primaryYellow;
+}
+
+p {
+  font-family: $fontFamilyRegular, sans-serif;
+  font-size: 16px;
+  color: $primaryYellow;
+  margin-bottom: 5px;
+}
 
 // CONTAINER STYLES
 
