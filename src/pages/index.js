@@ -173,6 +173,11 @@ class IndexPage extends React.Component {
           <Panel id={5} display={this.state.panels[5]}>
             <h1 className="">John</h1>
             <h1 className="">Smith</h1>
+            <ul className="social-networks spin-icon">
+              <li><a href="https://www.linkedin.com/" className="icon-linkedin">LinkedIn</a></li>
+              <li><a href="https://twitter.com/" className="icon-twitter">Twitter</a></li>
+              <li><a href="https://github.com" className="icon-github">GitHub</a></li>
+            </ul>
           </Panel>
         </ColumnLeft>
         <ColumnRight>
