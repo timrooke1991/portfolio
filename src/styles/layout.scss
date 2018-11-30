@@ -19,6 +19,8 @@
 	font-style: normal;
 }
 
+@import url('https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css');
+
 // Look at code pen bookmarks for style sheets setup
 
 // FONT
@@ -155,20 +157,6 @@ button.down {
 
 // ICONS
 
-.icon-container {
-  display: grid;
-  flex-direction: row;
-  grid-template-columns: 25% 25% 25% 25%;
-}
-
-.icon-circle {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background: purple;
-  margin: 15px;
-}
-
 .social-networks {
   margin: 0 0 35px;
   padding: 0;
@@ -224,6 +212,33 @@ button.down {
     }
   }
 
+  i {
+    font-size: 96px;
+    padding: 10px;
+    color: white;
+    display: block;
+    position: relative;
+    margin: 0 7px;
+    width: 96px;
+    height: 96px;
+    text-align: center;
+    text-decoration: none;
+
+    &:before {
+      font-family: 'devicon';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      margin-top: -50%;
+      margin-left: -50%;
+      border-radius: 100px;
+      transition: all 400ms;
+    }
+  }
+
+
   &.spin-icon a:hover:after, &.spin-icon a:focus:after {
     transition: transform 0.4s ease-out;
     transform: rotateZ(360deg);
@@ -239,6 +254,16 @@ button.down {
 
       &:hover:before, &:focus:before {
         background: nth($network, 3);
+      }
+    }
+  }
+
+  $skills: javascript #393939, react #61DAFB, node #83CD29;
+
+  @each $skill in $skills {
+     .skill-#{nth($skill, 1)} {
+       &:before {
+         background: nth($skill, 2);
       }
     }
   }

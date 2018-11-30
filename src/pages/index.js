@@ -115,16 +115,17 @@ class IndexPage extends React.Component {
           </Panel>
           <Panel id={2} display={this.state.panels[2]}>
             <h2>Professional</h2>
-            <div className="icon-container">
-              <div className="icon-circle" />
-              <div className="icon-circle" />
-              <div className="icon-circle" />
-              <div className="icon-circle" />
-              <div className="icon-circle" />
-              <div className="icon-circle" />
-              <div className="icon-circle" />
-              <div className="icon-circle" />
-            </div>
+            <ul className="social-networks spin-icon">
+              <li>
+                <i className="devicon-javascript-plain colored skill-javascript" />
+              </li>
+              <li>
+                <i className="devicon-react-original-wordmark skill-react" />
+              </li>
+              <li>
+                <i className="devicon-nodejs-plain-wordmark skill-node" />
+              </li>
+            </ul>
           </Panel>
           <Panel id={3} display={this.state.panels[3]}>
             <h2>Web Development</h2>
@@ -174,9 +175,21 @@ class IndexPage extends React.Component {
             <h1 className="">John</h1>
             <h1 className="">Smith</h1>
             <ul className="social-networks spin-icon">
-              <li><a href="https://www.linkedin.com/" className="icon-linkedin">LinkedIn</a></li>
-              <li><a href="https://twitter.com/" className="icon-twitter">Twitter</a></li>
-              <li><a href="https://github.com" className="icon-github">GitHub</a></li>
+              <li>
+                <a href="https://www.linkedin.com/" className="icon-linkedin">
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/" className="icon-twitter">
+                  Twitter
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com" className="icon-github">
+                  GitHub
+                </a>
+              </li>
             </ul>
           </Panel>
         </ColumnLeft>
@@ -266,6 +279,7 @@ class IndexPage extends React.Component {
             </div>
           </Panel>
         </ColumnRight>
+
         <button
           className={`down ${this.state.disableDown ? 'hide-button' : ''}`}
           type="button"
