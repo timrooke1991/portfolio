@@ -129,28 +129,24 @@ class IndexPage extends React.Component {
           </Panel>
           <Panel id={3} display={this.state.panels[3]}>
             <h2>Web Development</h2>
-            <div>
-              <h3>Junior Full Stack Developer, Axis Workshops</h3>
-              <span>Oct 2014 – Feb 2017, 1 yrs 5 mos</span>
-              <p>
-                I was responsible for all aspects of the project delivery
-                process, from client booking to report delivery; ensuring
-                accurate data processing and reporting; working with third party
-                suppliers. I would also provide support to the global sales
-                team.
-              </p>
-            </div>
-            <div>
-              <h3>Web Developer, Bili</h3>
-              <span>Aug 2013 – Oct 2014, 9 mos</span>
-              <p>
-                I was responsible for all aspects of the project delivery
-                process, from client booking to report delivery; ensuring
-                accurate data processing and reporting; working with third party
-                suppliers. I would also provide support to the global sales
-                team.
-              </p>
-            </div>
+            <h4>Axis Workshops</h4>
+            <span>Junior Full Stack Developer</span>
+            <p>
+              I was responsible for all aspects of the project delivery
+              process, from client booking to report delivery; ensuring
+              accurate data processing and reporting; working with third party
+              suppliers. I would also provide support to the global sales
+              team.
+            </p>
+            <h4>Bili</h4>
+            <span>Web Developer</span>
+            <p>
+              I was responsible for all aspects of the project delivery
+              process, from client booking to report delivery; ensuring
+              accurate data processing and reporting; working with third party
+              suppliers. I would also provide support to the global sales
+              team.
+            </p>
           </Panel>
           <Panel id={4} display={this.state.panels[4]}>
             <h2 className="">About Me</h2>
@@ -222,27 +218,23 @@ class IndexPage extends React.Component {
           </Panel>
           <Panel id={8} display={this.state.panels[8]} mode="light">
             <h2>Product & Project Management</h2>
-            <div>
-              <h3>Product Manager, Company Name</h3>
-              <span>Oct 2014 – Feb 2017, 2 yrs 5 mos</span>
-              <p>
-                In my time at Unruly, I built reporting dashboards from scratch,
-                transitioned the product to surveying on mobile, managed a
-                product re-positioning, integrated APIs, added cookie tracking
-                technology and prototyped first-party data segments.
-              </p>
-            </div>
-            <div>
-              <h3>Project Manager, Company Name</h3>
-              <span>Aug 2013 – Oct 2014, 9 mos</span>
-              <p>
-                I was responsible for all aspects of the project delivery
-                process, from client booking to report delivery; ensuring
-                accurate data processing and reporting; working with third party
-                suppliers. I would also provide support to the global sales
-                team.
-              </p>
-            </div>
+            <h3>Product Manager, Company Name</h3>
+            <span>Oct 2014 – Feb 2017, 2 yrs 5 mos</span>
+            <p>
+              In my time at Unruly, I built reporting dashboards from scratch,
+              transitioned the product to surveying on mobile, managed a
+              product re-positioning, integrated APIs, added cookie tracking
+              technology and prototyped first-party data segments.
+            </p>
+            <h3>Project Manager, Company Name</h3>
+            <span>Aug 2013 – Oct 2014, 9 mos</span>
+            <p>
+              I was responsible for all aspects of the project delivery
+              process, from client booking to report delivery; ensuring
+              accurate data processing and reporting; working with third party
+              suppliers. I would also provide support to the global sales
+              team.
+            </p>
           </Panel>
           <Panel id={9} display={this.state.panels[9]} mode="light">
             <h2>Personal</h2>
