@@ -154,6 +154,7 @@ class IndexPage extends React.Component {
           </Panel>
           <Panel id={4} display={this.state.panels[4]}>
             <h2 className="">About Me</h2>
+            <h4>Before Coding</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel
               eleifend ante, ut placerat ex. Duis mollis metus purus, eget
@@ -162,6 +163,7 @@ class IndexPage extends React.Component {
               feugiat et. Integer pulvinar arcu id leo viverra finibus efficitur
               vitae arcu.
             </p>
+            <h4>Moving into Coding</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel
               eleifend ante, ut placerat ex. Duis mollis metus purus, eget
@@ -172,7 +174,7 @@ class IndexPage extends React.Component {
             </p>
           </Panel>
           <Panel id={5} display={this.state.panels[5]}>
-            <h1 className="">John Smith</h1>
+            <h1 className="">Tim Rooke</h1>
             <h3>Full Stack JavaScript Developer</h3>
             <ul className="social-networks spin-icon">
               <li>
@@ -204,16 +206,16 @@ class IndexPage extends React.Component {
             </p>
           </Panel>
           <Panel id={7} display={this.state.panels[7]} mode="light">
-            <h2>How I spend my time</h2>
-            <p>
+            <h2 className="darkText">How I spend my time</h2>
+            <p className="darkText">
               Reading: Integer pulvinar arcu id leo viverra finibus efficitur
               vitae arcu.
             </p>
-            <p>
+            <p className="darkText">
               Running: Integer pulvinar arcu id leo viverra finibus efficitur
               vitae arcu.
             </p>
-            <p>
+            <p className="darkText">
               Cooking: Integer pulvinar arcu id leo viverra finibus efficitur
               vitae arcu.
             </p>
