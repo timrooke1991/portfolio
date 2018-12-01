@@ -239,16 +239,7 @@ class IndexPage extends React.Component {
           <Panel id={9} display={this.state.panels[9]} mode="light">
             <h2>Personal</h2>
             <div className="icon-container">
-              <div className="icon-circle" />
-              <div className="icon-circle" />
-              <div className="icon-circle" />
-              <div className="icon-circle" />
-              <div className="icon-circle" />
-              <div className="icon-circle" />
-              <div className="icon-circle" />
-              <div className="icon-circle" />
-              <div className="icon-circle" />
-              <div className="icon-circle" />
+
             </div>
           </Panel>
           <Panel id={10} display={this.state.panels[10]} mode="light">
