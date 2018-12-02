@@ -132,20 +132,18 @@ class IndexPage extends React.Component {
             <h4>Axis Workshops</h4>
             <span>Junior Full Stack Developer</span>
             <p>
-              I was responsible for all aspects of the project delivery
-              process, from client booking to report delivery; ensuring
-              accurate data processing and reporting; working with third party
-              suppliers. I would also provide support to the global sales
-              team.
+              I was responsible for all aspects of the project delivery process,
+              from client booking to report delivery; ensuring accurate data
+              processing and reporting; working with third party suppliers. I
+              would also provide support to the global sales team.
             </p>
             <h4>Bili</h4>
             <span>Web Developer</span>
             <p>
-              I was responsible for all aspects of the project delivery
-              process, from client booking to report delivery; ensuring
-              accurate data processing and reporting; working with third party
-              suppliers. I would also provide support to the global sales
-              team.
+              I was responsible for all aspects of the project delivery process,
+              from client booking to report delivery; ensuring accurate data
+              processing and reporting; working with third party suppliers. I
+              would also provide support to the global sales team.
             </p>
           </Panel>
           <Panel id={4} display={this.state.panels[4]}>
@@ -222,25 +220,32 @@ class IndexPage extends React.Component {
             <span>Oct 2014 – Feb 2017, 2 yrs 5 mos</span>
             <p>
               In my time at Unruly, I built reporting dashboards from scratch,
-              transitioned the product to surveying on mobile, managed a
-              product re-positioning, integrated APIs, added cookie tracking
-              technology and prototyped first-party data segments.
+              transitioned the product to surveying on mobile, managed a product
+              re-positioning, integrated APIs, added cookie tracking technology
+              and prototyped first-party data segments.
             </p>
             <h3>Project Manager, Company Name</h3>
             <span>Aug 2013 – Oct 2014, 9 mos</span>
             <p>
-              I was responsible for all aspects of the project delivery
-              process, from client booking to report delivery; ensuring
-              accurate data processing and reporting; working with third party
-              suppliers. I would also provide support to the global sales
-              team.
+              I was responsible for all aspects of the project delivery process,
+              from client booking to report delivery; ensuring accurate data
+              processing and reporting; working with third party suppliers. I
+              would also provide support to the global sales team.
             </p>
           </Panel>
           <Panel id={9} display={this.state.panels[9]} mode="light">
             <h2>Personal</h2>
-            <div className="icon-container">
-
-            </div>
+            <ul className="social-networks spin-icon">
+              <li>
+                <i className="devicon-javascript-plain colored skill-javascript" />
+              </li>
+              <li>
+                <i className="devicon-react-original-wordmark skill-react" />
+              </li>
+              <li>
+                <i className="devicon-nodejs-plain-wordmark skill-node" />
+              </li>
+            </ul>
           </Panel>
           <Panel id={10} display={this.state.panels[10]} mode="light">
             <h2>Academic</h2>
