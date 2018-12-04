@@ -153,18 +153,14 @@ class IndexPage extends React.Component {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel
               eleifend ante, ut placerat ex. Duis mollis metus purus, eget
               consequat nisi luctus non. Cras placerat justo eu ante tempor
-              dignissim. Praesent iaculis ligula elit, ut consectetur augue
-              feugiat et. Integer pulvinar arcu id leo viverra finibus efficitur
-              vitae arcu.
+              dignissim.
             </p>
             <h4>Moving into Coding</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel
               eleifend ante, ut placerat ex. Duis mollis metus purus, eget
               consequat nisi luctus non. Cras placerat justo eu ante tempor
-              dignissim. Praesent iaculis ligula elit, ut consectetur augue
-              feugiat et. Integer pulvinar arcu id leo viverra finibus efficitur
-              vitae arcu.
+              dignissim.
             </p>
           </Panel>
           <Panel id={5} display={this.state.panels[5]}>
