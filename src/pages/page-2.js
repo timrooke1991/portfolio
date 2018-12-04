@@ -4,6 +4,7 @@ class SecondPage extends Component {
   constructor() {
     super();
 
+    // Need to get data from API source - blogs, projects, whatever...
     this.state = {
       data: [
         {
