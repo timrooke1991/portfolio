@@ -10,6 +10,7 @@ class Panel extends React.Component {
     };
   }
 
+  // Work out best way to deal with this...
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.display !== nextProps.display) {
       this.setState({
