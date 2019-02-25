@@ -93,75 +93,16 @@ class IndexPage extends React.Component {
         <ColumnLeft>
           <Panel id={1} display={this.state.panels[1]}>
             <h2>Education</h2>
-            <div>
-              <h3>Web Development Immersive</h3>
-              <span>Oct 2014 – Feb 2017, 1 yrs 5 mos</span>
-              <p>
-                At GA, we were taught programming fundamentals and build
-                full-stack RESTful web apps using the latest, modern web
-                development technologies.
-              </p>
-            </div>
-            <div>
-              <h3>AWS Developer Qualification</h3>
-              <span>Aug 2013 – Aug 2015</span>
-              <p>
-                I was responsible for all aspects of the project delivery
-                process, from client booking to report delivery; ensuring
-                accurate data processing and reporting; working with third party
-                suppliers.
-              </p>
-            </div>
           </Panel>
           <Panel id={2} display={this.state.panels[2]}>
-            <h2>Professional</h2>
-            <ul className="social-networks spin-icon">
-              <li>
-                <i className="devicon-javascript-plain colored skill-javascript" />
-              </li>
-              <li>
-                <i className="devicon-react-original-wordmark skill-react" />
-              </li>
-              <li>
-                <i className="devicon-nodejs-plain-wordmark skill-node" />
-              </li>
-            </ul>
+            <h2>Skills</h2>
           </Panel>
           <Panel id={3} display={this.state.panels[3]}>
-            <h2>Web Development</h2>
-            <h4>Axis Workshops</h4>
-            <span>Junior Full Stack Developer</span>
-            <p>
-              I was responsible for all aspects of the project delivery process,
-              from client booking to report delivery; ensuring accurate data
-              processing and reporting; working with third party suppliers. I
-              would also provide support to the global sales team.
-            </p>
-            <h4>Bili</h4>
-            <span>Web Developer</span>
-            <p>
-              I was responsible for all aspects of the project delivery process,
-              from client booking to report delivery; ensuring accurate data
-              processing and reporting; working with third party suppliers. I
-              would also provide support to the global sales team.
-            </p>
+            <h1>Development</h1>
           </Panel>
           <Panel id={4} display={this.state.panels[4]}>
-            <h2 className="">About Me</h2>
-            <h4>Before Coding</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel
-              eleifend ante, ut placerat ex. Duis mollis metus purus, eget
-              consequat nisi luctus non. Cras placerat justo eu ante tempor
-              dignissim.
-            </p>
-            <h4>Moving into Coding</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel
-              eleifend ante, ut placerat ex. Duis mollis metus purus, eget
-              consequat nisi luctus non. Cras placerat justo eu ante tempor
-              dignissim.
-            </p>
+            <h1 className="">About Me</h1>
+            <h3>Responsible for all aspects of the project delivery process</h3>
           </Panel>
           <Panel id={5} display={this.state.panels[5]}>
             <h1 className="">Tim Rooke</h1>
