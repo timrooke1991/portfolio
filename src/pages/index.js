@@ -142,18 +142,17 @@ class IndexPage extends React.Component {
             </p>
           </Panel>
           <Panel id={7} display={this.state.panels[7]} mode="light">
-            <h2 className="darkText">How I spend my time</h2>
-            <p className="darkText">
-              Reading: Integer pulvinar arcu id leo viverra finibus efficitur
-              vitae arcu.
+            <h3 className="darkText">Running</h3>
+            <p>
+              Training for Berlin Marathon, Hoping to run sub-3 hours one day.
             </p>
-            <p className="darkText">
-              Running: Integer pulvinar arcu id leo viverra finibus efficitur
-              vitae arcu.
+            <h3 className="darkText">Learning</h3>
+            <p>
+              Teaching myself Computer Science. Currently, writing an Operating System.
             </p>
-            <p className="darkText">
-              Cooking: Integer pulvinar arcu id leo viverra finibus efficitur
-              vitae arcu.
+            <h3 className="darkText">Cooking</h3>
+            <p>
+              Know more than I should about types of oils, seeds and spices, but can make a decent takeaway curry!
             </p>
           </Panel>
           <Panel id={8} display={this.state.panels[8]} mode="light">
