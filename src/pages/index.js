@@ -128,12 +128,17 @@ class IndexPage extends React.Component {
         </ColumnLeft>
         <ColumnRight>
           <Panel id={6} display={this.state.panels[6]} mode="light">
-            <h2 className="">Full Stack</h2>
-            <h2 className="">Developer</h2>
+            <h3 className="darkText">Product</h3>
             <p>
-              JavaScript Engineer specialising in React, Redux and Node with a
-              background in PHP (Laravel) and Ruby. AWS qualified. Experienced
-              working with and in startups and Agile environments.
+              5+ experience years designing, building and scaling products.
+            </p>
+            <h3 className="darkText">Engineering</h3>
+            <p>
+              Writing, building, testing, deploying … and whatever else comes up!
+            </p>
+            <h3 className="darkText">Agile</h3>
+            <p>
+              Enjoy and experienced in fast-paced startup cultures.
             </p>
           </Panel>
           <Panel id={7} display={this.state.panels[7]} mode="light">
