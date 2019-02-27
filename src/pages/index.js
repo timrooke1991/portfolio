@@ -156,58 +156,49 @@ class IndexPage extends React.Component {
             </p>
           </Panel>
           <Panel id={8} display={this.state.panels[8]} mode="light">
-            <h2>Product & Project Management</h2>
-            <h3>Product Manager, Company Name</h3>
-            <span>Oct 2014 – Feb 2017, 2 yrs 5 mos</span>
+            <h3 className="darkText">Axis Workshops</h3>
+            <h4>Full Stack Developer</h4>
             <p>
-              In my time at Unruly, I built reporting dashboards from scratch,
-              transitioned the product to surveying on mobile, managed a product
-              re-positioning, integrated APIs, added cookie tracking technology
-              and prototyped first-party data segments.
+              Revolutionising company workshops.
             </p>
-            <h3>Project Manager, Company Name</h3>
-            <span>Aug 2013 – Oct 2014, 9 mos</span>
+            <h3 className="darkText">Bili</h3>
+            <h4>Junior Web Developer</h4>
             <p>
-              I was responsible for all aspects of the project delivery process,
-              from client booking to report delivery; ensuring accurate data
-              processing and reporting; working with third party suppliers. I
-              would also provide support to the global sales team.
+              The online student language exchange, which enables structured peer-to-peer interaction, in a safe, teacher monitored space.
+            </p>
+            <h3 className="darkText">Unruly</h3>
+            <h4>Product Manager</h4>
+            <p>
+              Unruly uses emotional data to deliver awesome video advertising on brand-safe, premium sites, driving the most revenue for premium publishers.
             </p>
           </Panel>
           <Panel id={9} display={this.state.panels[9]} mode="light">
-            <h2>Personal</h2>
-            <ul className="social-networks spin-icon">
-              <li>
-                <i className="devicon-javascript-plain colored skill-javascript" />
-              </li>
-              <li>
-                <i className="devicon-react-original-wordmark skill-react" />
-              </li>
-              <li>
-                <i className="devicon-nodejs-plain-wordmark skill-node" />
-              </li>
-            </ul>
+            <h3 className="darkText">JavaScript</h3>
+            <p>
+              Exposure to the depths of the JavaScript ecosystem using technologies such as Node, Express, Babel, Jest and more.
+            </p>
+            <h3 className="darkText">React</h3>
+            <p>
+              Hands-on experience using React and Redux to build awesome UIs data-driven front ends.
+            </p>
+            <h3 className="darkText">AWS</h3>
+            <p>
+              AWS Developer qualified since February 2018 with experience AWS’ suite of tools in professional roles.
+            </p>
           </Panel>
           <Panel id={10} display={this.state.panels[10]} mode="light">
-            <h2>Academic</h2>
-            <div>
-              <h3>London School Economics, International Relations</h3>
-              <span>Oct 2016 – Oct 2016, 1 yrs</span>
-              <p>
-                At GA, we were taught programming fundamentals and build
-                full-stack RESTful web apps using the latest, modern web
-                development technologies.
-              </p>
-            </div>
-            <div>
-              <h3>University of Exeter, Law</h3>
-              <span>Oct 2012 – Feb 2015, 3 yrs 5 mos</span>
-              <p>
-                At GA, we were taught programming fundamentals and build
-                full-stack RESTful web apps using the latest, modern web
-                development technologies.
-              </p>
-            </div>
+            <h3 className="darkText">General Assembly</h3>
+            <p>
+              Web Development Immersive
+            </p>
+            <h3 className="darkText">LSE</h3>
+            <p>
+              History of International Relations
+            </p>
+            <h3 className="darkText">University of Exeter</h3>
+            <p>
+              Law
+            </p>
           </Panel>
         </ColumnRight>
 
