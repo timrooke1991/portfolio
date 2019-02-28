@@ -17,15 +17,17 @@ class IndexPage extends React.Component {
         2: false,
         3: false,
         4: false,
-        5: true,
+        5: false,
         6: true,
-        7: false,
+        7: true,
         8: false,
         9: false,
-        10: false
+        10: false,
+        11: false,
+        12: false
       },
-      leftPanel: 5,
-      rightPanel: 6,
+      leftPanel: 6,
+      rightPanel: 7,
       disableUp: true,
       disableDown: false
     };
@@ -42,7 +44,9 @@ class IndexPage extends React.Component {
       7: false,
       8: false,
       9: false,
-      10: false
+      10: false,
+      11: false,
+      12: false
     };
   }
 
@@ -65,8 +69,8 @@ class IndexPage extends React.Component {
       return null;
     }
 
-    const disableDown = [1, 10].includes(newLeftPanel);
-    const disableUp = [5, 6].includes(newLeftPanel);
+    const disableDown = [1, 12].includes(newLeftPanel);
+    const disableUp = [6, 7].includes(newLeftPanel);
 
     const panels = this.resetPanelConfig();
     panels[newLeftPanel] = true;
@@ -93,29 +97,35 @@ class IndexPage extends React.Component {
         <Column position="left">
           <Panel id={1} display={this.state.panels[1]}>
             <Title
-              heading="Education"
+              heading="Volunteer"
               subHeading="blah blah blah"
             />
           </Panel>
           <Panel id={2} display={this.state.panels[2]}>
             <Title
-              heading="Skills"
+              heading="Education"
               subHeading="blah blah blah"
             />
           </Panel>
           <Panel id={3} display={this.state.panels[3]}>
             <Title
-              heading="Experience"
+              heading="Skills"
               subHeading="blah blah blah"
             />
           </Panel>
           <Panel id={4} display={this.state.panels[4]}>
             <Title
-              heading="About Me"
+              heading="Experience"
               subHeading="blah blah blah"
             />
           </Panel>
           <Panel id={5} display={this.state.panels[5]}>
+            <Title
+              heading="About Me"
+              subHeading="blah blah blah"
+            />
+          </Panel>
+          <Panel id={6} display={this.state.panels[6]}>
             <Title
               heading="Tim Rooke"
               subHeading="Full Stack JavaScript Developer"
@@ -124,7 +134,7 @@ class IndexPage extends React.Component {
           </Panel>
         </Column>
         <Column position="right">
-          <Panel id={6} display={this.state.panels[6]} mode="light">
+          <Panel id={7} display={this.state.panels[7]} mode="light">
             <Description
               heading="Product"
               paragraph="5+ experience years designing, building and scaling products."
@@ -138,7 +148,7 @@ class IndexPage extends React.Component {
               paragraph="Enjoy and experienced in fast-paced startup cultures."
             />
           </Panel>
-          <Panel id={7} display={this.state.panels[7]} mode="light">
+          <Panel id={8} display={this.state.panels[8]} mode="light">
             <Description
               heading="Running"
               paragraph="Training for Berlin Marathon, Hoping to run sub-3 hours one day."
@@ -152,7 +162,7 @@ class IndexPage extends React.Component {
               paragraph="Know more than I should about types of oils, seeds and spices, but can make a decent takeaway curry!"
             />
           </Panel>
-          <Panel id={8} display={this.state.panels[8]} mode="light">
+          <Panel id={9} display={this.state.panels[9]} mode="light">
             <Description
               heading="Axis Workshops"
               subHeading="Full Stack Developer"
@@ -169,7 +179,7 @@ class IndexPage extends React.Component {
               paragraph="Unruly uses emotional data to deliver awesome video advertising on brand-safe, premium sites, driving the most revenue for premium publishers."
             />
           </Panel>
-          <Panel id={9} display={this.state.panels[9]} mode="light">
+          <Panel id={10} display={this.state.panels[10]} mode="light">
             <Description
               heading="JavaScript"
               paragraph="Exposure to the depths of the JavaScript ecosystem using technologies such as Node, Express, Babel, Jest and more."
@@ -183,7 +193,7 @@ class IndexPage extends React.Component {
               paragraph="AWS Developer qualified since February 2018 with experience AWS’ suite of tools in professional roles."
             />
           </Panel>
-          <Panel id={10} display={this.state.panels[10]} mode="light">
+          <Panel id={11} display={this.state.panels[11]} mode="light">
             <Description
               heading="General Assembly"
               paragraph="Web Development Immersive"
@@ -195,6 +205,23 @@ class IndexPage extends React.Component {
             <Description
               heading="University of Exeter"
               paragraph="Law"
+            />
+          </Panel>
+          <Panel id={12} display={this.state.panels[12]} mode="light">
+            <Description
+              heading="Brightside"
+              subHeading="Mentor"
+              paragraph="A social mobility charity, connecting young people with online mentors who provide support and advice."
+            />
+            <Description
+              heading="Code Your Future"
+              subHeading="Teaching Assistant"
+              paragraph="A 6-month JavaScript bootcamp supporting refugees with the dream of becoming developers"
+            />
+            <Description
+              heading="Parkrun"
+              subHeading="Volunteer"
+              paragraph="Parkrun organise free, weekly, 5km timed runs around the world open to anyone!"
             />
           </Panel>
         </Column>
