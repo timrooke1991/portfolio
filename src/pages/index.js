@@ -89,7 +89,6 @@ class IndexPage extends React.Component {
           type="button"
           onClick={() => this.handleClick('up')}
         >
-          UP
         </button>
         <Column position="left">
           <Panel id={1} display={this.state.panels[1]}>
@@ -205,7 +204,6 @@ class IndexPage extends React.Component {
           type="button"
           onClick={() => this.handleClick('down')}
         >
-          DOWN
         </button>
       </Layout>
     );
