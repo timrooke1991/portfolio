@@ -116,6 +116,11 @@ h4 {
 }
 
 // TEXT
+
+.description-block {
+  text-align: center;
+}
+
 p {
   font-family: $fontFamilyRegular, sans-serif;
   font-size: 16px;
@@ -155,12 +160,16 @@ span {
 .container-left {
   background-image: url(../images/pattern-dark.jpg);
   grid-area: 1 / 1 / 6 / 2;
+  position: relative;
+  overflow: hidden;
 }
 
 .container-right {
   // background-image: url(../images/pattern-light.jpg);
   background: #ECDA79;
   grid-area: 1 / 2 / 6 / 2;
+  position: relative;
+  overflow: hidden;
 }
 
 // PANEL STYLINGS
@@ -182,6 +191,8 @@ span {
 
 .flex-container {
   display: flex;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .vertically-center {
@@ -190,28 +201,46 @@ span {
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: 100%
+  width: 100%;
+  padding: 20px 0;
 }
 
-.show {
-  max-height: 100%;
-  line-height: 0;
-  transition: max-height 0.5s ease-out;
+.container-left {
+  .show {
+    position: absolute;
+    top: 0;
+    line-height: 0;
+    transition: top 0.5s ease-out;
 
-  p {
-    line-height: 28px;
+    p {
+      line-height: 28px;
+    }
+  }
+
+  .hide {
+    position: absolute;
+    top: -100vh;
+    zoom: 1;
+    transition: top 0.5s ease-out;
   }
 }
 
-.hide {
-  max-height: 0px;
-  overflow: hidden;
-  line-height: 0;
-  zoom: 1;
-  transition: max-height 0.5s ease-out;
+.container-right {
+  .show {
+    position: absolute;
+    top: 0;
+    transition: top 0.5s ease-out;
 
-  p {
-    line-height: 0;
+    p {
+      line-height: 28px;
+    }
+  }
+
+  .hide {
+    position: absolute;
+    top: 100vh;
+    zoom: 1;
+    transition: top 0.5s ease-out;
   }
 }
 
@@ -222,8 +251,7 @@ button {
   outline: none;
   border: none;
   cursor: pointer;
-
-
+  z-index: 99;
 }
 
 button.up {
@@ -408,5 +436,6 @@ button.down {
   height: 100%;
   box-sizing: border-box;
   font-family: Menlo, Monaco, 'Courier New', monospace;
+  z-index: 99;
 }
 
