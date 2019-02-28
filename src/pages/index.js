@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
-import ColumnLeft from '../components/columnLeft';
-import ColumnRight from '../components/columnRight';
+import Column from '../components/column';
 import Panel from '../components/panel';
 
 class IndexPage extends React.Component {
@@ -90,7 +89,7 @@ class IndexPage extends React.Component {
         >
           UP
         </button>
-        <ColumnLeft>
+        <Column position="left">
           <Panel id={1} display={this.state.panels[1]}>
             <h2>Education</h2>
           </Panel>
@@ -125,8 +124,8 @@ class IndexPage extends React.Component {
               </li>
             </ul>
           </Panel>
-        </ColumnLeft>
-        <ColumnRight>
+        </Column>
+        <Column position="right">
           <Panel id={6} display={this.state.panels[6]} mode="light">
             <h3 className="darkText">Product</h3>
             <p>
@@ -200,7 +199,7 @@ class IndexPage extends React.Component {
               Law
             </p>
           </Panel>
-        </ColumnRight>
+        </Column>
 
         <button
           className={`down ${this.state.disableDown ? 'hide-button' : ''}`}
