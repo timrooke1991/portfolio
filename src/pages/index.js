@@ -104,25 +104,25 @@ class IndexPage extends React.Component {
           <Panel id={2} display={this.state.panels[2]}>
             <Title
               heading="Education"
-              subHeading="blah blah blah"
+              subHeading="A somewhat scenic route to web development"
             />
           </Panel>
           <Panel id={3} display={this.state.panels[3]}>
             <Title
               heading="Skills"
-              subHeading="blah blah blah"
+              subHeading="Hands-on experience across the stack including infrastructure and devOps"
             />
           </Panel>
           <Panel id={4} display={this.state.panels[4]}>
             <Title
               heading="Experience"
-              subHeading="blah blah blah"
+              subHeading="Track record building products at startups and in agile working environments"
             />
           </Panel>
           <Panel id={5} display={this.state.panels[5]}>
             <Title
               heading="About Me"
-              subHeading="blah blah blah"
+              subHeading="Sports fan. Occasional blogger. Haribo addict."
             />
           </Panel>
           <Panel id={6} display={this.state.panels[6]}>
