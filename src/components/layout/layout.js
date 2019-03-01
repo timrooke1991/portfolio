@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Editor from './editor';
+import Editor from '../visual/editor';
 
-import '../styles/reset.scss';
-import '../styles/layout.scss';
+import '../../styles/reset.scss';
+import '../../styles/layout.scss';
 
 const Layout = ({ children }) => (
   <div className="container">

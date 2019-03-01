@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes, { number } from 'prop-types';
+import PropTypes from 'prop-types';
 import LineNumber from './lineNumber';
 
 class Editor extends React.Component {
