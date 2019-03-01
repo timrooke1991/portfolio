@@ -98,7 +98,7 @@ class IndexPage extends React.Component {
           <Panel id={1} display={this.state.panels[1]}>
             <Title
               heading="Volunteer"
-              subHeading="blah blah blah"
+              subHeading="Something about contribution"
             />
           </Panel>
           <Panel id={2} display={this.state.panels[2]}>
