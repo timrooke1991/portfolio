@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Layout from '../components/layout';
-import Column from '../components/column';
-import Panel from '../components/panel';
-import SocialIcons from '../components/socialIcons';
-import Title from '../components/title';
-import Description from '../components/description';
+import Layout from '../components/layout/layout';
+import Column from '../components/layout/column';
+import Panel from '../components/layout/panel';
+import SocialIcons from '../components/icons/socialIcons';
+import Title from '../components/text/title';
+import Description from '../components/text/description';
 
 class IndexPage extends React.Component {
   constructor(props) {
