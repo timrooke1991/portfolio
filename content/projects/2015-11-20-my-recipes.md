@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "myRecipes"
+title:  "My Recipes"
 date:   2015-11-20
 excerpt: "An app where users could post recipes, list ingredients and like other people's recipes using Ruby on Rails"
 project: true
@@ -39,9 +39,9 @@ MyRecipes App is available to view and register [here.](https://myrecipestr.hero
 
 ## Project Description
 
-This was the first project using Ruby and Rails. I wanted to build a simple web RESTful app. I decided to build an app where users could post recipes, list ingredients and like other people's recipes. The main aim of this was to build a typical web app in a different programming language and using a different framework.  
+This was the first project using Ruby and Rails. I wanted to build a simple web RESTful app. I decided to build an app where users could post recipes, list ingredients and like other people's recipes. The main aim of this was to build a typical web app in a different programming language and using a different framework.
 
-![Landing Page](../assets/img/my-recipes/home.png)   
+![Landing Page](../assets/img/my-recipes/home.png)
 
 ### [](https://github.com/timrooke1991/myrecipes#features)Features
 
@@ -73,7 +73,7 @@ The biggest challenge of the application was working with the Rails, which was a
 
 ### [](https://github.com/timrooke1991/myrecipes#rounding-it-off)Rounding it off
 
-![Landing Page](../assets/img/my-recipes/index.png)   
+![Landing Page](../assets/img/my-recipes/index.png)
 
 Improvements that I would like to make to the project in the future would be:
 
