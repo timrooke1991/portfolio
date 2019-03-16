@@ -1,33 +1,74 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
-  const { markdownRemark } = data // data.markdownRemark holds our post data
-  const { frontmatter, html } = markdownRemark
-  return (
-    <div className="blog-post-container">
-      <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
+import Layout from "../components/layout/layout";
+import Column from "../components/layout/column";
+import Panel from "../components/layout/panel";
+import Title from "../components/text/title";
+import Description from "../components/text/description";
+import SEO from "../components/seo"
+
+class BlogPostTemplate extends React.Component {
+  render() {
+    const post = this.props.data.markdownRemark;
+    const siteTitle = this.props.data.site.siteMetadata.title;
+    const { previous, next } = this.props.pageContext;
+
+    return (
+      <Layout location={this.props.location} title={siteTitle}>
+        <SEO
+          title={post.frontmatter.title}
+          description={post.frontmatter.description || post.excerpt}
         />
-      </div>
-    </div>
-  )
+        {previous && (
+          <Link to={previous.fields.slug} rel="prev">
+            <button className="up"></button>
+          </Link>
+        )}
+
+        <Column position="left">
+          <Panel id={1} display={true}>
+            <Title
+              heading={post.frontmatter.title}
+              subHeading={post.frontmatter.date}
+            />
+          </Panel>
+        </Column>
+        <Column position="right">
+          <Panel id={2} display={true}>
+            <Description
+              heading=""
+              paragraph={post.frontmatter.description}
+            />
+          </Panel>
+        </Column>
+        {next && (
+          <Link to={next.fields.slug} rel="next">
+            <button className="down"></button>
+          </Link>
+        )}
+      </Layout>
+    );
+  }
 }
 
+export default BlogPostTemplate
+
 export const pageQuery = graphql`
-  query($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+  query BlogPostBySlug($slug: String!) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      id
+      excerpt(pruneLength: 160)
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        slug
         title
+        date(formatString: "MMMM DD, YYYY")
+        description
       }
     }
   }
