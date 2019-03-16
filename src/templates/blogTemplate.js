@@ -38,8 +38,9 @@ class BlogPostTemplate extends React.Component {
           <Panel id={2} display={true}>
             <Description
               heading=""
-              paragraph={post.frontmatter.description}
+              paragraph={post.frontmatter.description || post.frontmatter.excerpt}
             />
+            {post.frontmatter.tags}
           </Panel>
         </Column>
         {next && (
@@ -69,6 +70,8 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        excerpt
+        tags
       }
     }
   }
