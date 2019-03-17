@@ -10,7 +10,6 @@ class Panel extends React.Component {
     };
   }
 
-  // Work out best way to deal with this...
   static getDerivedStateFromProps(props, state) {
     if (props.display !== state.display) {
       return {
