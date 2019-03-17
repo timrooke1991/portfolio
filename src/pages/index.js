@@ -92,8 +92,7 @@ class IndexPage extends React.Component {
           className={`up ${this.state.disableUp ? 'hide-button' : ''}`}
           type="button"
           onClick={() => this.handleClick('up')}
-        >
-        </button>
+        />
         <Column position="left">
           <Panel id={1} display={this.state.panels[1]}>
             <Title
@@ -202,10 +201,7 @@ class IndexPage extends React.Component {
               heading="LSE"
               paragraph="History of International Relations"
             />
-            <Description
-              heading="University of Exeter"
-              paragraph="Law"
-            />
+            <Description heading="University of Exeter" paragraph="Law" />
           </Panel>
           <Panel id={12} display={this.state.panels[12]} mode="light">
             <Description
@@ -230,8 +226,7 @@ class IndexPage extends React.Component {
           className={`down ${this.state.disableDown ? 'hide-button' : ''}`}
           type="button"
           onClick={() => this.handleClick('down')}
-        >
-        </button>
+        />
       </Layout>
     );
   }

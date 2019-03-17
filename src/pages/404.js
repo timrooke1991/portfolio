@@ -9,10 +9,7 @@ const NotFoundPage = () => (
   <Layout>
     <Column position="left">
       <Panel id={1} display={true}>
-        <Title
-          heading="404 Alert!"
-          subHeading="We could not find that page"
-        />
+        <Title heading="404 Alert!" subHeading="We could not find that page" />
       </Panel>
     </Column>
     <Column position="right">

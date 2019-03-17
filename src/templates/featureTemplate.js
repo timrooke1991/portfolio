@@ -1,17 +1,16 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import Layout from "../components/layout/layout";
-import Column from "../components/layout/column";
-import Panel from "../components/layout/panel";
-import Title from "../components/text/title";
-import SEO from "../components/seo"
+import Layout from '../components/layout/layout';
+import Column from '../components/layout/column';
+import Panel from '../components/layout/panel';
+import Title from '../components/text/title';
+import SEO from '../components/seo';
 
 class FeaturePostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
     const siteTitle = this.props.data.site.siteMetadata.title;
-    const { previous, next } = this.props.pageContext;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -59,4 +58,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

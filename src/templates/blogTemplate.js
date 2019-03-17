@@ -1,12 +1,12 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
 
-import Layout from "../components/layout/layout";
-import Column from "../components/layout/column";
-import Panel from "../components/layout/panel";
-import Title from "../components/text/title";
-import Description from "../components/text/description";
-import SEO from "../components/seo"
+import Layout from '../components/layout/layout';
+import Column from '../components/layout/column';
+import Panel from '../components/layout/panel';
+import Title from '../components/text/title';
+import Description from '../components/text/description';
+import SEO from '../components/seo';
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -22,7 +22,7 @@ class BlogPostTemplate extends React.Component {
         />
         {previous && (
           <Link to={previous.fields.slug} rel="prev">
-            <button className="up"></button>
+            <button className="up" />
           </Link>
         )}
 
@@ -38,14 +38,16 @@ class BlogPostTemplate extends React.Component {
           <Panel id={2} display={true}>
             <Description
               heading=""
-              paragraph={post.frontmatter.description || post.frontmatter.excerpt}
+              paragraph={
+                post.frontmatter.description || post.frontmatter.excerpt
+              }
             />
             {post.frontmatter.tags}
           </Panel>
         </Column>
         {next && (
           <Link to={next.fields.slug} rel="next">
-            <button className="down"></button>
+            <button className="down" />
           </Link>
         )}
       </Layout>
@@ -75,4 +77,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

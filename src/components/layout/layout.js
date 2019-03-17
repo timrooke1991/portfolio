@@ -13,7 +13,6 @@ const Layout = ({ children }) => (
   </div>
 );
 
-
 Layout.propTypes = {
   children: PropTypes.node.isRequired
 };

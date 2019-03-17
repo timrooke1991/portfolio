@@ -9,14 +9,18 @@
 }
 
 @font-face {
-	font-family: 'icomoon';
-	src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.eot?3qkin2');
-	src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.eot?#iefix3qkin2') format('embedded-opentype'),
-		url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.woff?3qkin2') format('woff'),
-		url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.ttf?3qkin2') format('truetype'),
-		url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.svg?3qkin2#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'icomoon';
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.eot?3qkin2');
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.eot?#iefix3qkin2')
+      format('embedded-opentype'),
+    url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.woff?3qkin2')
+      format('woff'),
+    url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.ttf?3qkin2')
+      format('truetype'),
+    url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.svg?3qkin2#icomoon')
+      format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @import url('https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css');
@@ -28,11 +32,11 @@ $fontFamilyRegular: 'Prime';
 $fontFamilyLight: 'PrimeLight';
 
 // COLORS
-$primaryYellow: #ECDA79;
-$primaryRed: #EC7971;
-$primaryBlue: #1B9A96;
+$primaryYellow: #ecda79;
+$primaryRed: #ec7971;
+$primaryBlue: #1b9a96;
 $primaryBlack: #393939;
-$primaryWhite: #E9E9E9;
+$primaryWhite: #e9e9e9;
 
 // HEADINGS
 h1 {
@@ -45,7 +49,6 @@ h1 {
   padding: 10px 5px 0 5px;
   margin-bottom: 10px;
   letter-spacing: 1.6px;
-
 }
 
 h2 {
@@ -87,7 +90,7 @@ h3 {
   }
 
   & + p {
-    font-family: "PrimeLight", sans-serif;
+    font-family: 'PrimeLight', sans-serif;
     font-weight: 600;
     color: #393939;
     letter-spacing: 1.6px;
@@ -107,7 +110,7 @@ h4 {
   text-align: center;
 
   & + p {
-    font-family: "PrimeLight", sans-serif;
+    font-family: 'PrimeLight', sans-serif;
     font-weight: 600;
     color: #393939;
     letter-spacing: 0.6px;
@@ -145,7 +148,7 @@ p {
 
 span {
   color: $primaryWhite;
-  font-family: $fontFamilyLight, sans-serif
+  font-family: $fontFamilyLight, sans-serif;
 }
 
 // CONTAINER STYLES
@@ -189,7 +192,7 @@ span {
 }
 
 .container-right {
-  background: #ECDA79;
+  background: #ecda79;
   grid-area: 1 / 2 / 6 / 2;
   position: relative;
   overflow: hidden;
@@ -302,7 +305,7 @@ button.up {
   letter-spacing: 0px;
 
   &:before {
-    content: ">";
+    content: '>';
     position: relative;
     left: 1px;
     top: -3px;
@@ -328,9 +331,8 @@ button.down {
   border: 2px solid $primaryYellow;
   letter-spacing: 0px;
 
-
   &:before {
-    content: "/>";
+    content: '/>';
     position: relative;
     left: 3px;
     top: -5px;
@@ -370,7 +372,7 @@ button.down {
     text-decoration: none;
 
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       top: 50%;
       left: 50%;
@@ -386,7 +388,6 @@ button.down {
       position: relative;
       display: block;
       font-family: 'icomoon';
-      speak: none;
       font-style: normal;
       font-weight: normal;
       font-variant: normal;
@@ -397,7 +398,8 @@ button.down {
       line-height: 66px;
     }
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       text-decoration: none;
     }
   }
@@ -428,32 +430,34 @@ button.down {
     }
   }
 
-
-  &.spin-icon a:hover:after, &.spin-icon a:focus:after {
+  &.spin-icon a:hover:after,
+  &.spin-icon a:focus:after {
     transition: transform 0.4s ease-out;
     transform: rotateZ(360deg);
   }
 
-  $networks: linkedin '\eac9' #0077b5, twitter '\e618' #00b0ed, github '\eab1' #24292D;
+  $networks: linkedin '\eac9' #0077b5, twitter '\e618' #00b0ed,
+    github '\eab1' #24292d;
 
   @each $network in $networks {
-     .icon-#{nth($network, 1)} {
-       &:after {
-         content: '#{nth($network, 2)}';
+    .icon-#{nth($network, 1)} {
+      &:after {
+        content: '#{nth($network, 2)}';
       }
 
-      &:hover:before, &:focus:before {
+      &:hover:before,
+      &:focus:before {
         background: nth($network, 3);
       }
     }
   }
 
-  $skills: javascript #393939, react #61DAFB, node #83CD29;
+  $skills: javascript #393939, react #61dafb, node #83cd29;
 
   @each $skill in $skills {
-     .skill-#{nth($skill, 1)} {
-       &:before {
-         background: nth($skill, 2);
+    .skill-#{nth($skill, 1)} {
+      &:before {
+        background: nth($skill, 2);
       }
     }
   }
@@ -473,7 +477,8 @@ button.down {
 }
 
 @media screen and (max-width: 768px) {
-  button.down, button.up {
+  button.down,
+  button.up {
     right: 20px;
     left: unset;
   }
@@ -483,4 +488,3 @@ button.down {
     border-color: $primaryBlack;
   }
 }
-

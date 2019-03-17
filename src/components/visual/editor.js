@@ -10,7 +10,7 @@ class Editor extends React.Component {
   renderNumbers(length) {
     const numberElements = [];
 
-    for(let i = 1; i <= length; i++) {
+    for (let i = 1; i <= length; i++) {
       numberElements.push(<LineNumber digit={i} />);
     }
 
@@ -29,6 +29,5 @@ class Editor extends React.Component {
 Editor.propTypes = {
   length: PropTypes.number.isRequired
 };
-
 
 export default Editor;
