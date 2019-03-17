@@ -9,6 +9,20 @@ import Description from '../components/text/description';
 import SEO from '../components/seo';
 
 class BlogPostTemplate extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      display: false
+    };
+  }
+
+  componentDidMount() {
+    this.setState({
+      display: true
+    });
+  }
+
   render() {
     const post = this.props.data.markdownRemark;
     const siteTitle = this.props.data.site.siteMetadata.title;
@@ -27,7 +41,7 @@ class BlogPostTemplate extends React.Component {
         )}
 
         <Column position="left">
-          <Panel id={1} display={true}>
+          <Panel id={1} display={this.state.display}>
             <Title
               heading={post.frontmatter.title}
               subHeading={post.frontmatter.date}
@@ -35,7 +49,7 @@ class BlogPostTemplate extends React.Component {
           </Panel>
         </Column>
         <Column position="right">
-          <Panel id={2} display={true}>
+          <Panel id={2} display={this.state.display}>
             <Description
               heading=""
               paragraph={

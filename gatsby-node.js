@@ -4,12 +4,12 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  const blogPost = path.resolve(`./src/templates/featureTemplate.js`);
+  const blogPost = path.resolve(`./src/templates/blogTemplate.js`);
   return graphql(
     `
       {
         allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
+          sort: { fields: [frontmatter___date], order: ASC }
           limit: 1000
         ) {
           edges {
