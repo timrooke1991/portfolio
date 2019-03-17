@@ -158,10 +158,11 @@ span {
   grid-template-rows: 100vh;
 }
 
-.container {
-    grid-template-columns: 100vw;
-    grid-template-rows: 35vh 65vh;
-  }
+// Need this styling for feature
+// .container {
+//   grid-template-columns: 100vw;
+//   grid-template-rows: 35vh 65vh;
+// }
 
 @media screen and (max-width: 768px) {
   .container {
