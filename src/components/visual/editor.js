@@ -11,7 +11,7 @@ class Editor extends React.Component {
     const numberElements = [];
 
     for (let i = 1; i <= length; i++) {
-      numberElements.push(<LineNumber digit={i} />);
+      numberElements.push(<LineNumber key={i} digit={i} />);
     }
 
     return numberElements;
