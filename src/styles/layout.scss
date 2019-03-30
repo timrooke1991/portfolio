@@ -476,6 +476,37 @@ button.down {
   z-index: 99;
 }
 
+.side-navigation {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  align-items: flex-end;
+  right: 15px;
+
+  .navigation-item {
+    margin: 5px 0;
+    height: 5px;
+    width: 5px;
+    padding: 5px;
+    border-radius: 50%;
+    background: $primaryBlack;
+  }
+
+  .navigation-item-active {
+    position: relative;
+    margin: 3px 0;
+    right: -3px;
+    height: 7px;
+    width: 7px;
+    padding: 5px;
+    border-radius: 50%;
+    background: $primaryYellow;
+    border: 2px solid $primaryBlack;
+  }
+}
+
 @media screen and (max-width: 768px) {
   button.down,
   button.up {

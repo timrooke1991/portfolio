@@ -7,6 +7,7 @@ import Panel from '../components/layout/panel';
 import Title from '../components/text/title';
 import Description from '../components/text/description';
 import SEO from '../components/seo';
+import SideNavigation from '../components/navigation/sideNavigation';
 
 class BlogPostTemplate extends React.Component {
   constructor(props) {
@@ -26,8 +27,8 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
     const siteTitle = this.props.data.site.siteMetadata.title;
-    const { previous, next } = this.props.pageContext;
-
+    const { previous, next, slugs } = this.props.pageContext;
+    console.log(slugs);
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
@@ -58,6 +59,7 @@ class BlogPostTemplate extends React.Component {
             />
             {post.frontmatter.tags}
           </Panel>
+          <SideNavigation slugs={slugs} />
         </Column>
         {next && (
           <Link to={next.fields.slug} rel="next">
