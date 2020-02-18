@@ -97,7 +97,7 @@ class IndexPage extends React.Component {
           <Panel id={1} display={this.state.panels[1]}>
             <Title
               heading="Volunteer"
-              subHeading="Something about contribution"
+              subHeading="Contribution and helping others avoid my mistakes"
             />
           </Panel>
           <Panel id={2} display={this.state.panels[2]}>
@@ -121,7 +121,7 @@ class IndexPage extends React.Component {
           <Panel id={5} display={this.state.panels[5]}>
             <Title
               heading="About Me"
-              subHeading="Sports fan. Occasional blogger. Haribo addict."
+              subHeading="Big sports fan, aspiring chef and stock market dabbler"
             />
           </Panel>
           <Panel id={6} display={this.state.panels[6]}>
@@ -150,15 +150,15 @@ class IndexPage extends React.Component {
           <Panel id={8} display={this.state.panels[8]} mode="light">
             <Description
               heading="Running"
-              paragraph="Training for Berlin Marathon, Hoping to run sub-3 hours one day."
+              paragraph="Regularly run marathons, half marathons, 10kms and Parkruns, Hoping to run sub-3 hours one day."
             />
             <Description
               heading="Learning"
-              paragraph="Teaching myself Computer Science. Currently, writing an Operating System."
+              paragraph="Always, trying to learn something new. Currently, learning Italian and attempting to play the piano."
             />
             <Description
               heading="Cooking"
-              paragraph="Know more than I should about types of oils, seeds and spices, but can make a decent takeaway curry!"
+              paragraph="Love food, and can be often found snooping and scouting around London’s local farmers’ markets."
             />
           </Panel>
           <Panel id={9} display={this.state.panels[9]} mode="light">
