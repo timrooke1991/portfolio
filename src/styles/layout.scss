@@ -306,9 +306,8 @@ button.up {
 
   &:before {
     content: '>';
-    position: relative;
-    left: 1px;
-    top: -3px;
+    display: flex;
+    justify-content: space-around;
   }
 
   &:hover {
@@ -333,9 +332,8 @@ button.down {
 
   &:before {
     content: '/>';
-    position: relative;
-    left: 3px;
-    top: -5px;
+    display: flex;
+    justify-content: space-around;
   }
 
   &:hover {
@@ -508,6 +506,32 @@ button.down {
 }
 
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+
+  h3.darkText {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 0 0px 4px 0px;
+    margin-top: 12px
+  }
+
+  .container-right .show p {
+    line-height: 18px;
+  }
+
+  h4+p {
+    padding: 0 4px;
+  }
   button.down,
   button.up {
     right: 20px;
